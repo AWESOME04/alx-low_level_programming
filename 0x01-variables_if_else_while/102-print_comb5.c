@@ -1,3 +1,4 @@
+Refactor the code below
 #include <stdio.h>
 
 /**
@@ -8,29 +9,26 @@ int main(void)
 {
 	int i, j, k, l;
 
-	for (i = 0; i <= 9; i++)
+	for (i = 0; i <= 99; i++)
 	{
-		for (j = 0; j <= 9; j++)
-		{
-			for (k = 0; k <= 9; k++)
-			{
-				for (l = 0; l <= 9; l++)
-				{
-					if ((i < k) || ((i == k) && (j < l)))
-					{
-						putchar(i + '0');
-						putchar(j + '0');
-						putchar(' ');
-						putchar(k + '0');
-						putchar(l + '0');
+		j = i % 10;
+		k = i / 10;
 
-						if (i != 9 || j != 8 ||  k != 9 || l != 9)
-						{
-							putchar(',');
-							putchar(' ');
-						}
-					}
-				}
+		for (l = i; l <= 99; l++)
+		{
+			int m = l % 10;
+			int n = 1 / 10;
+
+			putchar(k + '0');
+			putchar(j + '0');
+			putchar(' ');
+			putchar(n + '0');
+			putchar(m + '0');
+
+			if (i != 98 || l != 9)
+			{
+				putchar(',');
+				putchar(' ');
 			}
 		}
 	}
