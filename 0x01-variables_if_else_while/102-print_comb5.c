@@ -1,4 +1,3 @@
-Refactor the code below
 #include <stdio.h>
 
 /**
