@@ -15,22 +15,17 @@
  */
 int main(void)
 {
-	int i = 0;
+	int num;
+	char la;
 
-	while (i < 100)
+	for (num = 0; num < 10; num++)
 	{
-		if (i / 10 < i % 10)
-		{
-			putchar(i / 10 + '0');
-			putchar(i % 10 + '0');
+		putchar((num % 10) + '0');
+	}
 
-		if (i < 89)
-		{
-			putchar(',');
-			putchar(' ');
-		}
-		}
-	i++;
+	for (la = 'a'; la <= 'f'; la++)
+	{
+		putchar(la);
 	}
 
 	putchar('\n');
